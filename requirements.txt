@@ -63,7 +63,6 @@ jsii==1.13.0
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
 packaging==20.4
-pkg-resources==0.0.0
 pluggy==0.13.1
 publication==0.0.3
 py==1.9.0
