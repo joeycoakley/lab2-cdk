@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
 from aws_cdk import core
+from cdk.cdk_stack import MasterNetworkStack
 
-from cdk.cdk_stack import CdkStack
-
+network_master = core.Environment(account='256060500942', region="us-east-1")
 
 app = core.App()
-CdkStack(app, "cdk", env={'region': 'us-west-2'})
+master_network = MasterNetworkStack(app, "MasterNetworkStack", env=network_master)
+# fw1 = FirewallInstance(app, "Firewall1", master_network.subnets, env=network_master)
 
 app.synth()
